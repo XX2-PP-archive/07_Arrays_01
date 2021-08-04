@@ -85,15 +85,27 @@ ausgabe(getSentenceArr2(["Ich","bin"]));
 ausgabe(getSentenceArr2(["Ich","bin","Max","Mütze"]));
 ausgabe(getSentenceArr2(["Ich","bin","der","coole","Max","Mütze"]));
 function getSentenceArr2(arr) {
+    
     const gap = " ";
     const punct = "."
     let str = "";
 
     for (let i = 0; i < arr.length; i++) {
-        str += arr[i] + gap;
+        
+        // wenn ich noch NICHT das letzte Element habe --> gap
+        // wenn ich das letzte Element habe -->  punct
+        // a = a + 1 || a += 1  
+
+        if (i != arr.length-1) {
+            str += arr[i] + gap;
+        } else {
+            str += arr[i] + punct;
+        }
+        
+            
     }
 
-    return str + punct; 
+    return str; 
 }
 
 
